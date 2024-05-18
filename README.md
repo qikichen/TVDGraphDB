@@ -4,7 +4,7 @@ TVDGraphDB is an open-source distributed graph database designed for building po
 
 ## Table of Contents
 
-- [Motivation] (#motivation)
+- [Motivation](#motivation)
 - [Features](#features)
 - [Objectives](#objectives)
 - [Usage](#usage)
