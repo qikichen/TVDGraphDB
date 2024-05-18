@@ -11,3 +11,10 @@ class TupleNode:
         set the edges of each individual node
         '''
         self.edges =  edge_list
+
+    def add_edges(self, edge):
+        '''
+        Add singular edge
+        '''
+        self.edges.append(edge)
+
