@@ -29,7 +29,7 @@ _Note: I want to increase my objectives as time goes on, for now this is what I 
 
 1. **Learn to use Docker**: I have heard of Docker being within industry to fix the "It works on my machine" problem. Therefore I decided to try my hands at docker for this project. [Completed]
 
-2. **Implement an Algorithm Connecting Nodes**: Need an algorithm that is able to connect all nodes to it's nearest neighbors but no further. Sort of creating a web of TupleNodes. [In Progress]
+2. **Implement an Algorithm Connecting Nodes**: Need an algorithm that is able to connect all nodes to it's nearest neighbors but no further. Sort of creating a web of TupleNodes. [Completed but needs testing] 
 
 3. **Implement Graph BFS Search for Recommendation**: Utilize the BFS algorithm to efficiently traverse the graph of TV shows and generate relevant recommendations based on user queries and preferences.[In Progress]
    
