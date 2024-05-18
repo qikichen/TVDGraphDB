@@ -27,9 +27,13 @@ Most recommendation engines out there focus on what users like. And sure, that's
 
 _Note: I want to increase my objectives as time goes on, for now this is what I am working on_
 
-1. **Implement Graph BFS Search for Recommendation**: Utilize the BFS algorithm to efficiently traverse the graph of TV shows and generate relevant recommendations based on user queries and preferences.[In Progress]
+1. **Learn to use Docker**: I have heard of Docker being within industry to fix the "It works on my machine" problem. Therefore I decided to try my hands at docker for this project. [Completed]
+
+2. **Implement an Algorithm Connecting Nodes**: Need an algorithm that is able to connect all nodes to it's nearest neighbors but no further. Sort of creating a web of TupleNodes. [In Progress]
+
+3. **Implement Graph BFS Search for Recommendation**: Utilize the BFS algorithm to efficiently traverse the graph of TV shows and generate relevant recommendations based on user queries and preferences.[In Progress]
    
-2. **Allow Distribution Across Multiple Nodes**: Design and implement a distributed architecture that allows TVDGraphDB to distribute data and processing across multiple nodes, ensuring scalability, fault tolerance, and high availability. [In Progress]
+4. **Allow Distribution Across Multiple Nodes**: Design and implement a distributed architecture that allows TVDGraphDB to distribute data and processing across multiple nodes, ensuring scalability, fault tolerance, and high availability. [In Progress]
 
 ## Usage
 
