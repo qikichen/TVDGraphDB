@@ -6,8 +6,14 @@ class TupleNode:
         self.data = _data # Data of the movie such as rating etc.
     
     def get_movie(self):
+        '''
+        Returns the movie title
+        '''
         return self.movie
     
     def get_data(self):
+        '''
+        Returns the data
+        '''
         return self.data
 

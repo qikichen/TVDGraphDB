@@ -10,15 +10,48 @@ class TVDGraphDB:
         # self.data = read_data
         self.adjacency_list = collections.defaultdict(list)
         self.buffer = []
-        self.nodes = []
+        self.nodes = [] # List of TupleNodes
         # This will be where the distributed systems comes in. I want to seperate the clusters
         self.cluster_to_nodes = collections.defaultdict(list)
+
+    def get_adjacency_list(self):
+        '''
+        Return the adjacency list
+        '''
+        return self.adjacency_list
+    
+    def set_adjacency_list(self, adj):
+        '''
+        Set the adjacency list [There isn't much use for this as the adjacency list is built within the class]
+        '''
+        self.adjacency_list = adj
+    
+    def clear_adjacency_list(self, adj):
+        '''
+        Clear the adjacency list 
+        '''
+        self.adjacency_list.clear()
+
 
     def load_nodes(self, node_array):
         '''
         Load the self.nodes buffer
         '''
         self.nodes = node_array
+    
+    def clear_nodes(self):
+        '''
+        Clear the self.nodes buffer
+        '''
+        self.nodes.clear()
+    
+    def return_nodes(self):
+        '''
+        Returns self.nodes
+        '''
+        return self.nodes
+
+    
     
     def calculate_distances(self, core, reference_point):
         '''
@@ -54,8 +87,7 @@ class TVDGraphDB:
                 self.adjacency_list[current_node].append(pop_node)
                 q.append(pop_node)
                 
-    def get_adjacency_list(self):
-        return self.adjacency_list
+
 
 
     
