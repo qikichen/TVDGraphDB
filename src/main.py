@@ -12,13 +12,15 @@ def main():
    E = TupleNode("E", [10,10])
    F = TupleNode("F", [11,10])
    G = TupleNode("G", [10,12])
+   H = TupleNode("H", [-20,-20])
 
-   movie_list = [A, B, C, D , E, F, G]
+   movie_list = [A, B, C, D , E, F, G,H]
 
    db = TVDGraphDB()
    db.load_nodes(movie_list)
-   db.create_network_graph(1)
-   print(db.get_adjacency_list)
+   db.create_network_graph(3)
+   db.plot_network()
+   db.print_adjacency()
 
 if __name__ == "__main__":
     main()
