@@ -2,6 +2,7 @@ import Pyro4
 
 from src.tvdgraphdb import TVDGraphDB
 from src.tuple_node import TupleNode
+from tests.test_network_graph import *
 
 def main():
 
@@ -14,7 +15,7 @@ def main():
    G = TupleNode("G", [10,12])
    H = TupleNode("H", [-20,-20])
 
-   movie_list = [A, B, C, D , E, F, G,H]
+   movie_list = [A, B, C, D, E, F, G,H]
 
    db = TVDGraphDB()
    db.load_nodes(movie_list)

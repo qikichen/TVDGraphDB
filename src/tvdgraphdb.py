@@ -66,7 +66,7 @@ class TVDGraphDB:
         return res
 
 
-    def bfs_network(self, node,num_of_1st_deg_neighbor) -> None:
+    def bfs_network(self, node, num_of_1st_deg_neighbor) -> None:
         '''
         Self made algorithm to create a network between TupleNodes by populating the adjacency list
         '''
@@ -84,9 +84,9 @@ class TVDGraphDB:
                 distance = self.calculate_distances(current_node, candidate)
                 distance_heap.append((distance, candidate))
             heapq.heapify(distance_heap)
-            for _ in range(num_of_1st_deg_neighbor-len(self.adjacency_list[current_node])):
+            for _ in range(num_of_1st_deg_neighbor - len(self.adjacency_list[current_node])):
                 #Processing the nearest neighbors and populate adjacency list
-                current_neighbor,pop_node = heapq.heappop(distance_heap)
+                current_neighbor, pop_node = heapq.heappop(distance_heap)
                 if len(self.adjacency_list[pop_node]) != num_of_1st_deg_neighbor:
                     self.adjacency_list[current_node].append(pop_node)
                     self.adjacency_list[pop_node].append(current_node)
