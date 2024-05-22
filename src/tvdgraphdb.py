@@ -16,6 +16,7 @@ class TVDGraphDB:
         self.nodes = [] # List of TupleNodes
         # This will be where the distributed systems comes in. I want to seperate the clusters
         self.cluster_to_nodes = collections.defaultdict(list)
+        self.exhausted_buffer = []
 
     def get_adjacency_list(self):
         '''
@@ -131,6 +132,31 @@ class TVDGraphDB:
             neighbors_movies = ', '.join(neighbor.get_movie() for neighbor in neighbors)
             print(f"{node.get_movie()}: {neighbors_movies}")
 
+    def get_recommendations(self, title):
+        '''
+        From a media title, get the frist degree neighbors. 
+        '''
+        try:
+            self.buffer.append(x for x in self.adjacency_list[title])
+            for media in self.buffer:
+                print(media.get_title())
+        except:
+            print("Media not found in database")
+    
+    def get_more_recommendations(self):
+        '''
+        Find more recommendations from the second degree neighbors [Needs some optimisaiton, the adding of the movies does not need to happen atomically]
+        '''
+        try:
+            self.exhausted_buffer = self.buffer
+            self.buffer.clear()
+            for seen_media in self.exhausted_buffer:
+                self.buffer.append(x for x in self.adjacency_list[seen_media])
+            self.exhausted_buffer.clear()
+        except:
+            print("Main Buffer Empty")
+
+            
 
 
     
