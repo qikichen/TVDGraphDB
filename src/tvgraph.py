@@ -7,7 +7,7 @@ import heapq
 
 
 
-class TVDGraphDB:
+class TVGraph:
     def __init__(self):
         # self.schema = _schema
         # self.data = read_data

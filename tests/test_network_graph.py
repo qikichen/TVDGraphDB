@@ -1,4 +1,4 @@
-from src.tvdgraphdb import TVDGraphDB
+from src.tvgraph import TVDGraphDB
 from src.tuple_node import TupleNode
 
 def test_1():

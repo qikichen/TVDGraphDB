@@ -1,6 +1,6 @@
 import Pyro4
 
-from src.tvdgraphdb import TVDGraphDB
+from src.tvgraph import TVDGraphDB
 from src.tuple_node import TupleNode
 from tests.test_network_graph import *
 
